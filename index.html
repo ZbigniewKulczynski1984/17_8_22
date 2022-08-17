@@ -18,7 +18,12 @@
     <div id="app"></div>
 
     <script type="text/babel">
-        ReactDOM.render(<h1>Hello React</h1>, document.querySelector('#app'))
+        class Headline extends React.Component {
+            render() {
+                return <h1>Hello React </h1>
+            }
+        }
+        ReactDOM.render(<Headline />, document.querySelector('#app'))
     </script>
     
 </body>
