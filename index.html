@@ -18,11 +18,33 @@
     <div id="app"></div>
 
     <script type="text/babel">
-        class Headline extends React.Component {
+        class Names extends React.Component {
             render() {
-                return <h1>Hello React </h1>
+                const names = ['Kevin', 'Oskar', 'Pam']
+                const namesList = names.map(name => <li> {name}</li>)
+                const showNames = true
+
+                return (
+                    <div>{showNames ? <ul>{namesList}</ul> : null}</div>
+                )
+                }
+
+        }
+        class Headline extends React.Component {
+            render() { //JSX te same kody napisane inaczej
+                // return <h1>Hello React </h1>
+                // return React.createElement('h1', null, 'Hello React') 
+                const title = 'ReactJS'
+
+                return (
+                        <div>
+                            <h1>Hello {title}</h1>
+                            <p>Lorem ipsum...</p>
+                            <Names />
+                        </div>)
             }
         }
+
         ReactDOM.render(<Headline />, document.querySelector('#app'))
     </script>
     
