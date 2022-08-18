@@ -32,16 +32,23 @@
                 }
         }
         class Headline extends React.Component {
+            state = {
+                title: 'ReactJS'
+            }
             render() { //JSX te same kody napisane inaczej
                 // return <h1>Hello React </h1>
                 // return React.createElement('h1', null, 'Hello React') 
-                const title = 'ReactJS'
+                const changeTitle = () => {
+                this.setState({title: 'Vue'}) 
+                }
+
 
                 return (
                         <div>
-                            <h1>Hello {title}</h1>
+                            <h1>Hello {this.state.title}</h1>
                             <p>Lorem ipsum...</p>
                             <Names />
+                            <button>onClick={changeTitle}Change title</button>
                         </div>)
             }
         }
