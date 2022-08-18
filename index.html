@@ -18,8 +18,10 @@
     <div id="app"></div>
 
     <script type="text/babel">
-        class Names extends React.Component {
-            render() {
+        // class Names extends React.Component {
+        //     render() 
+            const Names = function() {
+            {
                 const names = ['Kevin', 'Oskar', 'Pam']
                 const namesList = names.map(name => <li> {name}</li>)
                 const showNames = true
@@ -28,7 +30,6 @@
                     <div>{showNames ? <ul>{namesList}</ul> : null}</div>
                 )
                 }
-
         }
         class Headline extends React.Component {
             render() { //JSX te same kody napisane inaczej
